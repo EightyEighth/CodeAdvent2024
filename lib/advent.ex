@@ -2,6 +2,7 @@ defmodule Advent do
   @files_path Path.expand("../files", __DIR__)
   alias Advent.Day1
   alias Advent.Day2
+  alias Advent.Day3
   @moduledoc """
   Documentation for `Advent`.
   """
@@ -50,6 +51,22 @@ defmodule Advent do
     |> IO.puts
 
     IO.puts "Day 2 finished!"
+
+    IO.puts "Day 3 starting..."
+
+    IO.puts "Part 1"
+    Path.join(@files_path, "input3")
+    |> File.read
+    |> Day3.parse1
+    |> Day3.calculate_result
+    |> IO.puts
+
+    IO.puts "Part 2"
+    Path.join(@files_path, "input3")
+    |> File.read
+    |> Day3.parse2
+    |> Day3.calculate_result_with_switch
+    |> IO.puts
   end
 end
 
