@@ -8,8 +8,6 @@ defmodule Advent.Day1 do
       |> String.split
       |> Enum.map(&String.to_integer/1)
 
-    IO.inspect stream_list
-
     first_list =
       stream_list
       |> Enum.with_index

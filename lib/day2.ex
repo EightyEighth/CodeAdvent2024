@@ -7,11 +7,6 @@ defmodule Advent.Day2 do
         1 -> safe?(report)
         2 -> safe2?(report)
       end
-
-    if not is_safe do
-      IO.inspect(report, label: "Is not safe", charlists: :as_lists)
-    end
-
     case is_safe do
       true -> total_safe_reports(tail, state + 1, part)
       _ -> total_safe_reports(tail, state, part)

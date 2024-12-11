@@ -3,6 +3,7 @@ defmodule Advent do
   alias Advent.Day1
   alias Advent.Day2
   alias Advent.Day3
+  alias Advent.Day4
   @moduledoc """
   Documentation for `Advent`.
   """
@@ -66,6 +67,22 @@ defmodule Advent do
     |> File.read
     |> Day3.parse2
     |> Day3.calculate_result_with_switch
+    |> IO.puts
+
+    IO.puts "Day 4 starting..."
+
+    IO.puts "Part 1"
+    Path.join(@files_path, "input4.1")
+    |> File.read
+    |> Day4.parse
+    |> Day4.search_xmas
+    |> IO.puts
+
+    IO.puts "Part 2"
+    Path.join(@files_path, "input4.1")
+    |> File.read
+    |> Day4.parse
+    |> Day4.search_x_mas
     |> IO.puts
   end
 end
