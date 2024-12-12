@@ -4,6 +4,7 @@ defmodule Advent do
   alias Advent.Day2
   alias Advent.Day3
   alias Advent.Day4
+  alias Advent.Day5
   @moduledoc """
   Documentation for `Advent`.
   """
@@ -33,8 +34,6 @@ defmodule Advent do
     |> Day1.total_simmilarity_score
     |> IO.puts
 
-    IO.puts "Day 1 finished!"
-
     IO.puts "Day 2 starting..."
     list = Path.join(@files_path, "input2")
       |> File.read
@@ -51,7 +50,6 @@ defmodule Advent do
     |> Day2.total_safe_reports(0, 2)
     |> IO.puts
 
-    IO.puts "Day 2 finished!"
 
     IO.puts "Day 3 starting..."
 
@@ -83,6 +81,23 @@ defmodule Advent do
     |> File.read
     |> Day4.parse
     |> Day4.search_x_mas
+    |> IO.puts
+
+    IO.puts "Day 5 starting..."
+
+    IO.puts "Part 1"
+    Path.join(@files_path, "input5.1")
+    |> File.read
+    |> Day5.parse
+    |> Day5.count_middle_bad_pages
+    |> IO.inspect
+
+
+    IO.puts "Part 2"
+    Path.join(@files_path, "input5.1")
+    |> File.read
+    |> Day5.parse
+    |> Day5.count_middle_correct_pages
     |> IO.puts
   end
 end
