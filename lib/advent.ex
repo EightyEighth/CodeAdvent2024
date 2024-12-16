@@ -6,7 +6,7 @@ defmodule Advent do
   alias Advent.Day4
   alias Advent.Day5
   alias Advent.Day6
-
+  alias Advent.Day7
   @moduledoc """
   Documentation for `Advent`.
   """
@@ -114,12 +114,30 @@ defmodule Advent do
     |> IO.inspect
 
 
+    # IO.puts "Part 2"
+
+    # Path.join(@files_path, "example6.1")
+    # |> File.read
+    # |> Day6.parse
+    # |> Day6.move2
+    # |> IO.inspect
+
+    IO.puts "Day 6 starring..."
+
+    # IO.puts "Part 1"
+
+    # Path.join(@files_path, "input7.1")
+    # |> File.read
+    # |> Day7.parse
+    # |> Day7.corection
+    # |> IO.inspect
+
     IO.puts "Part 2"
 
-    Path.join(@files_path, "example6.1")
+    Path.join(@files_path, "input7.1")
     |> File.read
-    |> Day6.parse
-    |> Day6.move2
+    |> Day7.parse
+    |> Day7.corection2
     |> IO.inspect
 
   end
