@@ -5,6 +5,8 @@ defmodule Advent do
   alias Advent.Day3
   alias Advent.Day4
   alias Advent.Day5
+  alias Advent.Day6
+
   @moduledoc """
   Documentation for `Advent`.
   """
@@ -99,6 +101,27 @@ defmodule Advent do
     |> Day5.parse
     |> Day5.count_middle_correct_pages
     |> IO.puts
+
+
+    IO.puts "Day 6 starring..."
+
+    IO.puts "Part 1"
+
+    Path.join(@files_path, "example6.1")
+    |> File.read
+    |> Day6.parse
+    |> Day6.move
+    |> IO.inspect
+
+
+    IO.puts "Part 2"
+
+    Path.join(@files_path, "example6.1")
+    |> File.read
+    |> Day6.parse
+    |> Day6.move2
+    |> IO.inspect
+
   end
 end
 
